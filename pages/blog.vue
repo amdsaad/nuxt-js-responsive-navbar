@@ -1,8 +1,11 @@
 <template>
   <div>
-    <navbar />
-    <Nuxt id="inter" />
+    blog page
   </div>
 </template>
+
+<script>
+export default {};
+</script>
 
 <style></style>
