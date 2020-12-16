@@ -25,11 +25,12 @@ ul {
 header {
   height: 80px;
   position: fixed;
+  z-index: 99;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: transparent;
-  color: #3d3d3d;
+  background-color: #0000002f;
+  color: white;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -78,8 +79,41 @@ header .mobile-nav {
 }
 
 .haeder-dark {
-  background-color: #525252;
+  background-color: rgba(0, 0, 0, 0.918);
   color: white;
+}
+
+section {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  font-size: 4rem;
+  position: relative;
+  background-size: cover;
+}
+
+section h1 {
+  position: relative;
+  z-index: 5;
+}
+
+section::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#17171abb), to(#85939849));
+  background: linear-gradient(to right, #17171abb, #85939849);
 }
 
 @media screen and (max-width: 768px) {
@@ -104,7 +138,7 @@ header .mobile-nav {
         -ms-flex-align: center;
             align-items: center;
     height: 100vh;
-    background-color: rgba(224, 224, 224, 0.945);
+    background-color: rgba(0, 0, 0, 0.945);
   }
   header .navbar .nav-links .nav-link__item {
     margin: 1rem;
@@ -146,7 +180,7 @@ header .mobile-nav {
     height: 4px;
     width: 100%;
     left: 0;
-    background-color: grey;
+    background-color: white;
     opacity: 1;
     border-radius: 10px;
     -webkit-transition: 0.25s ease-in-out;
@@ -177,5 +211,8 @@ header .mobile-nav {
     -webkit-transform: rotate(-135deg);
             transform: rotate(-135deg);
     top: 40px;
+  }
+  section {
+    font-size: 3rem;
   }
 }
