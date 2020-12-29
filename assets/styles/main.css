@@ -23,6 +23,7 @@ ul {
 }
 
 header {
+  overflow: hidden;
   height: 80px;
   position: fixed;
   z-index: 99;
@@ -117,6 +118,9 @@ section::after {
 }
 
 @media screen and (max-width: 768px) {
+  header {
+    overflow: hidden;
+  }
   header .navbar {
     position: fixed;
     top: 0;
@@ -213,6 +217,7 @@ section::after {
     top: 40px;
   }
   section {
-    font-size: 3rem;
+    font-size: 2rem;
+    overflow: hidden;
   }
 }
